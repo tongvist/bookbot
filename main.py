@@ -17,6 +17,8 @@ def get_char_counts(words):
 
     for word in words:
         for letter in word:
+            if not letter.isalpha():
+                continue
             letter = letter.lower()
             if letter in characters:
                 characters[letter] += 1
